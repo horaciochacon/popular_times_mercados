@@ -1,7 +1,5 @@
 library(tidyverse)
-library(rjson)
 library(jsonlite)
-library(purrr)
 
 mercados_sun <- read_json("data/items.json",simplifyVector = TRUE) %>% 
   flatten() %>% 
