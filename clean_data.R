@@ -19,7 +19,7 @@ for (day in 1:7) {
      mercados <-bind_rows(mercados, mercado_temp)
 }
 
-write.csv(mercados, "data/mercados.csv")
+write_csv(mercados, "data/mercados.csv")
 
 
 
