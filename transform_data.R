@@ -1,6 +1,6 @@
 library(tidyverse)
 
-mercados <- read_csv("data/mercados.csv")
+mercados <- read_csv("data/mercados_07042020.csv")
 
 mercados_narrow <- mercados %>% 
   gather(key = "hora", value = "valor", 6:29) %>% 
@@ -23,4 +23,4 @@ g <- ggplot(mercados_narrow, aes(hora, day)) +
   theme_minimal() + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
-ggsave("plots/heatmap.pdf", g,dpi = 1000,scale = 5 )
+ggsave("plots/heatmap1.pdf", g,dpi = 1000,scale = 5 )
